@@ -1,0 +1,22 @@
+databaseChangeLog:
+  - changeSet:
+      id: Create role table
+      author: Elnur Rehimov
+      changes:
+        - createTable:
+            tableName: role
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar(128)
+                  constraints:
+                    nullable: false
+
+            remarks: Table to store information about role
